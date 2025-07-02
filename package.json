@@ -1,0 +1,11 @@
+{
+  "name": "cdatest",
+  "version": "1.0",
+  "main": "index.js",
+  "script": {
+    "server": "nodemon ./app/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
