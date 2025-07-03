@@ -6,7 +6,13 @@
 // On appelle la lib express
 const express = require("express")
 const app = express()
+
+
 // app = express et app on va l'utiliser ultérieurement
+
+
+// on récupère la route Post
+app.use("/blagues", require("./routes/blagues.routes"))
 
 // On va lancer le serveur en local avec la méthode listen 
 // D'abord on définit le port d'utilisation ->

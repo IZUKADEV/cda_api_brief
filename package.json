@@ -1,11 +1,32 @@
 {
-  "name": "cdatest",
-  "version": "1.0",
+  "name": "apiexpresscda",
+  "version": "1.0.0",
   "main": "index.js",
-  "script": {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon ./app/server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IZUKADEV/cda_api_brief.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IZUKADEV/cda_api_brief/issues"
+  },
+  "homepage": "https://github.com/IZUKADEV/cda_api_brief#readme",
+  "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "sequelize": "^6.37.7",
+    "sqlite": "^5.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   }
 }
