@@ -16,12 +16,12 @@ exports.Create = async (req, res) => { // on va créer une fonction asynchrone p
 
 exports.GetAll = async(req,res) => {
     // on utilise la méthode find all
-    const blagues = await blagues.findAll() // on va attendre que la requête est effectuée pour aller chercher toutes les données 
+    const blagues = await Blagues.findAll() // on va attendre que la requête est effectuée pour aller chercher toutes les données 
     res.json(blagues)
 } 
 
 exports.GetById = async (req,res) => {
-    const blagues = await blagues.findByPk(req.params.id); // Méthode find By PK qui signifie find by Id entre guillemet
+    const blagues = await Blagues.findByPk(req.params.id); // Méthode find By PK qui signifie find by Id entre guillemet
     if(!blagues) {
         return res.stauts(404).json({error: 'non trouvée'}) // Si l'id correspond à aucune blague = non trouvée 404
     }
@@ -29,9 +29,9 @@ exports.GetById = async (req,res) => {
 }
 
 exports.GetRandom = async (req, res) => {
-    const count = await blagues.count() // On va générer un nombre aléatoire avec le math random
+    const count = await Blagues.count() // On va générer un nombre aléatoire avec le math random
     const random = Math.floor(Math.random() * count); // On génère un nombre aléatoire 
-    const blagues = await blagues.findOne({offset: random}); // et là on génère un ID qui permet d'aller chercher dans la BDD
+    const blagues = await Blagues.findOne({offset: random}); // et là on génère un ID qui permet d'aller chercher dans la BDD
     res.json(blagues)
 }
 
