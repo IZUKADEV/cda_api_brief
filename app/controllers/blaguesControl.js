@@ -35,3 +35,4 @@ exports.GetRandom = async (req, res) => {
     res.json(blagues)
 }
 
+
