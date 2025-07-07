@@ -3,7 +3,14 @@ const express = require("express");
 const app = express();
 const sequelize = require('./bdd/database');
 
-// Middleware JSON 
+// On init Cors qui permet de gérer les requêtes entre le frontend et le backend
+
+// Le navigateur bloque la requête si CORS n’est pas activé.
+// 
+const cors = require("cors");
+app.use(cors());
+
+// Middleware JSON qui permet de parser le corps des requêtes en JSON
 app.use(express.json());
 
 // la variable "routes" appelle les routes
