@@ -2,7 +2,7 @@ name: Run Vitest Tests
 
 on:
   push:
-    branches: [main]  # ou "master" selon ta branche
+    branches: [main]  
   pull_request:
     branches: [main]
 
