@@ -1,13 +1,11 @@
-const { DataTypes } = require('sequelize') // typer les données qu'on va envoyer/recevoir
-const sequelize = require('../bdd/database')
-// Sachant que vu que c'est du texte on va utiliser String
+import { DataTypes } from 'sequelize'
+import sequelize from '../bdd/database.js'
 
 const Blagues = sequelize.define('Blagues', {
   content: {
-    type: DataTypes.STRING, // on définit les types
+    type: DataTypes.STRING,
     allowNull: false,
   },
 })
 
-// on exporte
-module.exports = Blagues
+export default Blagues

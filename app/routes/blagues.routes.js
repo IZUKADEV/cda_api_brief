@@ -57,19 +57,17 @@
  *         description: Blague créée
  */
 
-const express = require('express')
-const router = express.Router() // On récupère le router d'expressjs
-const controler = require('../controllers/blaguesControl')
+import express from 'express'
+import * as controler from '../controllers/blaguesControl.js'
 
-// On va donc créer plusieurs routes
+const router = express.Router()
 
-// Une pour pouvoir ajouter des blagues
-router.post('/', controler.Create) // on appelle la function create
-// Une pour toutes les blagues
+// Route random avant route avec paramètre dynamique pour éviter conflit
+router.get('/random', controler.GetRandom)
+
+// Routes classiques
+router.post('/', controler.Create)
 router.get('/', controler.GetAll)
-// Une pour l'ID
 router.get('/:id', controler.GetById)
-// Une pour le random
-router.get('/random/blagues', controler.GetRandom)
 
-module.exports = router
+export default router

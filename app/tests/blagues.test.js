@@ -1,6 +1,7 @@
 import request from 'supertest'
 import express from 'express'
 import { GetAll } from '../controllers/blaguesControl.js'
+import { vi } from 'vitest'
 
 // Mock du modèle Blagues
 vi.mock('../models', () => ({

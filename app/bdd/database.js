@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize') // On init l'ORM
+import { Sequelize } from 'sequelize' // On init l'ORM
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
@@ -6,4 +6,4 @@ const sequelize = new Sequelize({
   logging: false,
 })
 
-module.exports = sequelize
+export default sequelize

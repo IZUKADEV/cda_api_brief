@@ -1,5 +1,9 @@
-const swaggerDoc = require('swagger-jsdoc')
-const path = require('path')
+import swaggerDoc from 'swagger-jsdoc'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const options = {
   definition: {
@@ -26,4 +30,4 @@ const options = {
 
 const swaggerSpec = swaggerDoc(options)
 
-module.exports = swaggerSpec
+export default swaggerSpec
