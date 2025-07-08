@@ -1,4 +1,4 @@
-# API Carambar Test CDA 
+# API Carambar Test CDA
 
 Bienvenue sur le dépôt de la **Carambar API**, un projet réalisé dans le cadre du **CDA**
 
@@ -8,12 +8,12 @@ Bienvenue sur le dépôt de la **Carambar API**, un projet réalisé dans le cad
 ## Tech Stack
 
 -- **Backend** : Node.js, Express
+
 - **ORM** : Sequelize (avec SQLite)
 - **Documentation** : Swagger (via `swagger-jsdoc` + `swagger-ui-express`)
 - **Déploiement** :
   - Render.com (API)
   - GitHub Pages (frontend statique)
- 
 
 ## Routes
 
