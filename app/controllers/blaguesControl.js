@@ -5,7 +5,9 @@ exports.Create = async (req, res) => { // on va créer une fonction asynchrone p
     const { content } = req.body
 
     if(!content){ // Si content n'existe pas ou est vide 
-        return res.status(400).json({error: "Blague Requise"}) // return une erreur 400 blague requise
+        return res.status(400).json(
+        {error: "Blague Requise"}
+        ) // return une erreur 400 blague requise
     }
 
     const blagues = await Blagues.create({ content });  // On attend que la blague est créer puis on envoie les données en bdd
