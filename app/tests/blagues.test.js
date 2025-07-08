@@ -11,7 +11,7 @@ vi.mock('../models', () => ({
           id: 1,
           content: 'Quel est le comble pour un marin ? Avoir le nez qui coule',
           createdAt: '2025-07-07T11:24:25.044Z',
-          updatedAt: '2025-07-07T11:24:25.044Z'
+          updatedAt: '2025-07-07T11:24:25.044Z',
         },
       ]),
     ),
